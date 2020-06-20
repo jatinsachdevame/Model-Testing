@@ -4,17 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:background="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/userTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/playfair_display"
+        android:text="@string/user_message"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/chatBotTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userTV"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/playfair_display"
+        android:text="@string/chatBot_message"
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,17 +57,19 @@
             android:id="@+id/inputMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="9" />
+            android:layout_weight="9"
+            android:maxLines="5"/>
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/send"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:onClick="sendMessage"
             android:src="@drawable/send"
             app:backgroundTint="#fff"
-            app:fabSize="mini" />
+            app:fabSize="mini"
+            />
 
 
     </LinearLayout>

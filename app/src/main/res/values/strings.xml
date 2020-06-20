@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Model Testing</string>
+    <string name="user_message">Hello ChatBot, I\'m user</string>
+    <string name="chatBot_message">Hello user, I\'m ChatBot</string>
 </resources>
